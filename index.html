@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic Tac Toe - Stylish Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game">
+    <h1 class="game--title">Tic Tac Toe</h1>
+    <section class="game--container" role="grid" aria-label="Tic Tac Toe Board">
+      <div class="cell" data-cell-index="0" role="gridcell" aria-label="Cell 1" tabindex="0"></div>
+      <div class="cell" data-cell-index="1" role="gridcell" aria-label="Cell 2" tabindex="0"></div>
+      <div class="cell" data-cell-index="2" role="gridcell" aria-label="Cell 3" tabindex="0"></div>
+      <div class="cell" data-cell-index="3" role="gridcell" aria-label="Cell 4" tabindex="0"></div>
+      <div class="cell" data-cell-index="4" role="gridcell" aria-label="Cell 5" tabindex="0"></div>
+      <div class="cell" data-cell-index="5" role="gridcell" aria-label="Cell 6" tabindex="0"></div>
+      <div class="cell" data-cell-index="6" role="gridcell" aria-label="Cell 7" tabindex="0"></div>
+      <div class="cell" data-cell-index="7" role="gridcell" aria-label="Cell 8" tabindex="0"></div>
+      <div class="cell" data-cell-index="8" role="gridcell" aria-label="Cell 9" tabindex="0"></div>
+    </section>
+    <div class="game--status" aria-live="polite">It's X's turn</div>
+    <button class="game--restart" aria-label="Restart Game">Restart Game</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

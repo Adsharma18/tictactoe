@@ -1,0 +1,130 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #c3c4cc, #7822ce);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #f0f0f0;
+    user-select: none;
+  }
+  
+  .game {
+    background: #1f1f2e;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.3),
+      inset 0 0 10px #764ba2;
+    width: 360px;
+    text-align: center;
+  }
+  
+  .game--title {
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: #b8a1ff;
+    text-shadow: 0 0 8px #b8a1ffaa;
+  }
+  
+  .game--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .cell {
+    background: #2e2e42;
+    border-radius: 15px;
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.5),
+      inset 0 0 6px #764ba2;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5rem;
+    font-weight: 900;
+    color: #b8a1ff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    user-select: none;
+  }
+  
+  .cell:hover:not(.disabled) {
+    background: #cecdd2;
+    transform: scale(1.05);
+    box-shadow:
+      0 6px 12px rgba(0, 0, 0, 0.6),
+      inset 0 0 10px #a285ff;
+  }
+  
+  .cell.disabled {
+    cursor: default;
+    color: #6e6e8a;
+    box-shadow: none;
+    background: #2e2e42;
+  }
+  
+  .cell.x {
+    color: #ff6b6b;
+    text-shadow: 0 0 8px #ff6b6baa;
+  }
+  
+  .cell.o {
+    color: #6bc1ff;
+    text-shadow: 0 0 8px #6bc1ffaa;
+  }
+  
+  .game--status {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    min-height: 1.6em;
+    font-weight: 600;
+    color: #d0c9ff;
+    text-shadow: 0 0 5px #764ba2;
+  }
+  
+  .game--restart {
+    background: #764ba2;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    cursor: pointer;
+    box-shadow: 0 4px 15px #764ba2aa;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .game--restart:hover,
+  .game--restart:focus {
+    background: #b8a1ff;
+    color: #1f1f2e;
+    box-shadow: 0 6px 20px #b8a1ffcc;
+    outline: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 400px) {
+    .game {
+      width: 90vw;
+      padding: 20px;
+    }
+    .cell {
+      height: 90px;
+      font-size: 3.5rem;
+    }
+  }
+  
